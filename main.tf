@@ -10,6 +10,4 @@ provider "aws" {
   }
 }
 
-resource "aws_s3_bucket" "lambda_s3_bucket" {
-  bucket = "my-lambda-bucket-s3"
-}
+data "aws_caller_identity" "current" {}
